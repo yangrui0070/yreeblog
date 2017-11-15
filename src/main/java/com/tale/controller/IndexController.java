@@ -122,6 +122,8 @@ public class IndexController extends BaseController {
             int cp = request.queryInt("cp", 1);
             request.attribute("cp", cp);
         }
+        //TODO 修改逻辑
+        //增加文章的点击量
         updateArticleHit(contents.getCid(), contents.getHits());
         return this.render("post");
     }
